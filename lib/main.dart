@@ -49,13 +49,15 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
+            TextButton(
+              style: ButtonStyle(
+              splashFactory: NoSplash.splashFactory,
+              ),
               onPressed: () {
                 appState.getNext();
               },
               child: BigCard(current: number),
             ),
-        
             ],
         ),
       ),
@@ -74,7 +76,6 @@ class BigCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    // ↓ Add this.
     final style = theme.textTheme.displaySmall!.copyWith(
       color: theme.colorScheme.onPrimary,
     );
@@ -88,5 +89,5 @@ class BigCard extends StatelessWidget {
       ),
     );
   }
-
+  
 }
