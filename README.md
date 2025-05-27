@@ -1,0 +1,1 @@
+Button is a simple app that uses basic UI to make the user count down to a surprise. This app is a first attempt at creating an Android app.
