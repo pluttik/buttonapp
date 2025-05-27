@@ -29,9 +29,9 @@ class MyAppState extends ChangeNotifier {
   void getNext() {
     currentNumber = currentNumber - 1;
     surprise = currentNumber.toString();
-    if (currentNumber < 0) {
+    if (currentNumber < 1) {
       surprise = 'Surprise!';
-      // Reset the number to 10 when it goes below 0
+      // Reset the number to 10 when it goes below 1
       currentNumber = 11;
     }
     notifyListeners();
@@ -89,5 +89,5 @@ class BigCard extends StatelessWidget {
       ),
     );
   }
-  
+
 }
